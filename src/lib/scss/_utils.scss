@@ -1,0 +1,11 @@
+
+@function repeat($times, $value) {
+    $sequence: $value;
+    @if $times == 0 {
+        @return null;
+    }
+    @for $i from 1 to $times {
+        $sequence: append($sequence, $value)
+    }
+    @return $sequence
+}
