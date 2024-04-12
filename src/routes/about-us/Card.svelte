@@ -30,21 +30,14 @@
             background-color: #eee;
         }
         &:nth-child(4) {
-            grid-area: certificates;
-            background-color: $light-blue;
-        }
-        &:nth-child(5) {
             grid-area: coding-details;
             background-color: $light-blue;
         }
-        &:nth-child(6) {
+        &:nth-child(5) {
             grid-area: company;
             background-color: #eee;
         }
-        &:nth-child(7) {
-            grid-area: decoration; // can't decide
-        }
-        &:nth-child(8) {
+        &:nth-child(6) {
             grid-area: left-decoration; // can't decide
             background-color: #eee;
             height: 220px;

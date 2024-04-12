@@ -18,14 +18,12 @@
     <Card>
         <Achievements />
     </Card>
-    <Card />
     <Card>
         <CodingDetails />
     </Card>
     <Card>
         <Company />
     </Card>
-    <Card />
     <Card>
         <ProgrammingLanguagesLearnt />
     </Card>
@@ -39,18 +37,15 @@
         position: relative;
         display: grid;
         grid-template:
-            "about           about           about           about        picture      picture      picture   " min-content
-            "about           about           about           about        picture      picture      picture   " min-content
-            "about           about           about           about        picture      picture      picture   " min-content
-            "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-            "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-            "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-            "left-decoration left-decoration left-decoration company      company      company      company   " min-content
-            "left-decoration left-decoration left-decoration certificates certificates certificates decoration" min-content
-            "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-            "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-            "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-            "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
+            "about           about           about          about           picture         picture         picture        " min-content
+            "about           about           about          about           picture         picture         picture        " min-content
+            "about           about           about          about           picture         picture         picture        " min-content
+            "coding-details  coding-details  coding-details company         company         company         company        " min-content
+            "coding-details  coding-details  coding-details company         company         company         company        " min-content
+            "coding-details  coding-details  coding-details company         company         company         company        " min-content
+            "achievements    achievements    achievements   company         company         company         company        " min-content
+            "achievements    achievements    achievements   left-decoration left-decoration left-decoration left-decoration" min-content
+            "achievements    achievements    achievements   .               .               .               .              " min-content
             / sass.repeat(7, 1fr);
         gap: 20px 20px;
         max-width: 1140px;
@@ -63,30 +58,24 @@
         @media (max-width: 900px) {
             padding-top: 20px;
             grid-template:
-                "about           about           about           about        picture      picture      picture   " min-content
-                "about           about           about           about        picture      picture      picture   " min-content
-                "about           about           about           about        picture      picture      picture   " min-content
-                "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-                "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-                "coding-details  coding-details  coding-details  company      company      company      company   " min-content
-                "left-decoration left-decoration left-decoration company      company      company      company   " min-content
-                "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-                "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-                "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-                "achievements    achievements    achievements    certificates certificates certificates decoration" min-content
-                ".               .               .               certificates certificates certificates decoration" min-content
+                "about           about           about           about        picture      picture      picture     " min-content
+                "about           about           about           about        picture      picture      picture     " min-content
+                "about           about           about           about        picture      picture      picture     " min-content
+                "coding-details  coding-details  coding-details  company      company      company      company     " min-content
+                "coding-details  coding-details  coding-details  company      company      company      company     " min-content
+                "coding-details  coding-details  coding-details  company      company      company      company     " min-content
+                "left-decoration left-decoration left-decoration company      company      company      company     " min-content
+                ".               .               .               achievements achievements achievements achievements" min-content
                 / sass.repeat(7, 1fr);
         }
 
         @media (max-width: 800px) {
             grid-template:
-                "about           about           about           about           about        about        about        " min-content
-                "coding-details  coding-details  coding-details  coding-details  picture      picture      picture      " min-content
-                "company         company         company         company         company      company      company      " min-content
-                "decoration      decoration      decoration      decoration      decoration   decoration   decoration   " 100px
-                "left-decoration left-decoration left-decoration left-decoration certificates certificates certificates " min-content
-                "achievements    achievements    achievements    achievements    certificates certificates certificates " min-content
-                ".               .               .               .               certificates certificates certificates " min-content
+                "about           about           about           about           about           about           about          " min-content
+                "coding-details  coding-details  coding-details  coding-details  picture         picture         picture        " min-content
+                "company         company         company         company         company         company         company        " min-content
+                "left-decoration left-decoration left-decoration left-decoration left-decoration left-decoration left-decoration" min-content
+                "achievements    achievements    achievements    achievements    achievements    achievements    achievements   " min-content
                 / sass.repeat(7, 1fr);
         }
 
@@ -96,24 +85,8 @@
                 "picture         picture         picture         picture         picture        picture        picture       " min-content
                 "coding-details  coding-details  coding-details  coding-details  coding-details coding-details coding-details" min-content
                 "company         company         company         company         company        company        company       " min-content
-                "decoration      decoration      decoration      decoration      decoration     decoration     decoration    " 100px
-                "left-decoration left-decoration left-decoration left-decoration certificates   certificates   certificates  " min-content
-                "achievements    achievements    achievements    achievements    certificates   certificates   certificates  " min-content
-                ".               .               .               .               certificates   certificates   certificates  " min-content
-                / sass.repeat(7, 1fr);
-        }
-
-        @media (max-width: 500px) {
-            grid-template:
-                "about           about           about           about           about           about           about          " min-content
-                "picture         picture         picture         picture         picture         picture         picture        " min-content
-                "coding-details  coding-details  coding-details  coding-details  coding-details  coding-details  coding-details " min-content
-                "company         company         company         company         company         company         company        " min-content
-                "decoration      decoration      decoration      decoration      decoration      decoration      decoration     " 100px
-                "achievements    achievements    achievements    achievements    achievements    achievements    achievements   " min-content
                 "left-decoration left-decoration left-decoration left-decoration left-decoration left-decoration left-decoration" min-content
-                "certificates    certificates    certificates    certificates    certificates    certificates    certificates   " 200px
-                / sass.repeat(7, 1fr);
+                "achievements    achievements    achievements    achievements    achievements    achievements    achievements   " min-content;
         }
 
         @media (max-width: 450px) {

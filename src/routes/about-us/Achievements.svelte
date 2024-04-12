@@ -38,31 +38,14 @@
         color: #222;
         text-align: center;
 
-        @media (max-width: 900px) {
-            font-size: 1.5em;
-        }
-
         @media (max-width: 800px) {
-            font-size: 2em;
-        }
-
-        @media (max-width: 700px) {
-            font-size: 1.5em;
-        }
-
-        @media (max-width: 550px) {
-            font-size: 1.3em;
-        }
-
-        @media (max-width: 500px) {
             font-size: 2.5em;
         }
-
-        @media (max-width: 450px) {
+        @media (max-width: 550px) {
             font-size: 2em;
         }
 
-        @media (max-width: 380px) {
+        @media (max-width: 400px) {
             font-size: 1.5em;
         }
 
@@ -79,7 +62,8 @@
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
         gap: 15px 15px;
-        width: 100%;
+        width: min(100%, 500px);
+        margin-inline: auto;
         box-sizing: border-box;
         padding: 25px;
         background-color: #ccc;
