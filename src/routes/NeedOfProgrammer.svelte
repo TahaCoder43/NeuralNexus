@@ -32,7 +32,7 @@
     >
         Learn more
     </button>
-    <img alt="Illustration of a developer on a couch" src="/developers.png" />
+    <img alt="Illustration of a laptop on a table" src="/fading_laptop.png" />
 </div>
 
 <style lang="scss">
@@ -211,9 +211,10 @@
 
             @media (max-width: 550px) {
                 position: relative;
-                bottom: 50px;
+                width: 80%;
             }
             @media (max-width: 350px) {
+                width: 100%;
                 bottom: 30px;
             }
         }
