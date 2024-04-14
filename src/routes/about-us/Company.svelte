@@ -20,7 +20,7 @@
                 future, when our need grows we plan to hire skilled programmers from neuralnexus
             </p>
         </section>
-        <img alt="us" src="get-an-image" />
+        <img alt="us" />
         <section>
             <h4>Why we started this</h4>
             <p>
