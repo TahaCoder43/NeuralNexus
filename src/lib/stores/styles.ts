@@ -5,6 +5,7 @@ interface StylesStore {
     para: string[];
     line: string;
     myPicture: string;
+    scrollHeader: string;
 }
 
 let stylesStore = writable<StylesStore>({
@@ -12,6 +13,7 @@ let stylesStore = writable<StylesStore>({
     para: Array(3).fill("opacity: 1;"),
     line: "",
     myPicture: "",
+    scrollHeader: "scroll-behavior: smooth;",
 });
 
 export default stylesStore;

@@ -6,6 +6,7 @@
 
     let form: HTMLFormElement;
     let offerNames = ["O-level: Single Subject", "Full-Stack Developer", "Mastery: All In One!"];
+    // it's not a problem as stated by emailjs
     emailjs.init({ publicKey: PUBLIC_EMAILJS_KEY });
 
     function handleSubmit() {

@@ -9,7 +9,11 @@
         hideDocument("pricing");
     }
 
+    let scrollHeading: HTMLSpanElement;
+    let currIndex = 0;
+
     onMount(() => {
+        console.log("Initial:", scrollHeading);
         classesStore.update((classes) => {
             return { ...classes, heroContentContainer: "shown" };
         });
@@ -19,6 +23,39 @@
                 return { ...styles, line: "z-index: 1;" };
             });
         }, 1500);
+
+        let scrollHeight = scrollHeading.children[0].scrollHeight;
+
+        stylesStore.subscribe((styles) => {
+            if (styles.scrollHeader == "scroll-behavior: initial;") {
+                setTimeout(() => {
+                    scrollHeading.scrollTop = 0;
+                }, 500);
+                setTimeout(() => {
+                    stylesStore.update((styles) => {
+                        return { ...styles, scrollHeader: "scroll-behavior: smooth" };
+                    });
+                }, 1000);
+            }
+        });
+
+        setInterval(() => {
+            scrollHeading.scrollTop = scrollHeight * currIndex;
+            // scrollHeading.children[currIndex].scrollIntoView({
+            //     block: "nearest",
+            //     inline: "nearest",
+            // });
+            currIndex += 1;
+            if (currIndex >= scrollHeading.children.length) {
+                setTimeout(() => {
+                    console.log("comes here");
+                    currIndex = 1;
+                    stylesStore.update((styles) => {
+                        return { ...styles, scrollHeader: "scroll-behavior: initial;" };
+                    });
+                }, 1000);
+            }
+        }, 3000);
     });
 </script>
 
@@ -26,7 +63,18 @@
     <div id="hero-content-container" class={$classesStore.heroContentContainer}>
         <div id="hero-content">
             <h1>
-                The <span class="highlight">Nexus</span> Advantage. Experience the synergy of Sciences!
+                Need to <span class="highlight">learn</span>
+                Web development or O-level's
+                <span
+                    class="scroll highlight"
+                    style={$stylesStore.scrollHeader}
+                    bind:this={scrollHeading}
+                >
+                    <div>Computer</div>
+                    <div>Math</div>
+                    <div>Physics</div>
+                    <div>Computer</div>
+                </span>
             </h1>
             <p>
                 We teach Math, Physics, Computer for O-level, with programming seperately, in such a
@@ -182,7 +230,6 @@
             width: 100%;
             font-weight: 500;
             margin-top: 30px;
-
             @media (max-width: 500px) {
                 font-size: 1.5em;
             }
@@ -223,6 +270,14 @@
 
     .highlight {
         color: var(--highlight);
+    }
+
+    .scroll {
+        display: inline-block;
+        height: 1.2em;
+        overflow: hidden;
+        position: relative;
+        top: 0.14em;
     }
 
     #hero img {
